@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using mhcv.cls (v1.0, 10 Feb 2021) adapted by
+% Minghui Zhao(zhaominghui2011@gmail.com) from AltaCV 
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{mhcv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{mhcv}
+
+\documentclass[10pt,a4paper,ragged2e]{mhcv}
+
+%% mhcv uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+}
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \usepackage{fontspec}
+  \setmainfont{Carlito}[
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+  ]
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{37474F}
+%\colorlet{heading}{VividPurple}
+%\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\faIcon[regular]{bell}}}
+\renewcommand{\ratingmarker}{\faIcon[regular]{circle}}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{MINGHUI ZHAO \textcolor{gray}{| R\'esum\'e}}
+\tagline{Seeking 2021 summer internship @Data Science @Machine Learning @Artificial Intelligence}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{2.5cm}{American-passport-photo}
+%\photo{2.5cm}{little_boy}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \email{mhzhao@iastate.com}
+    \phone{+01 515-598-6213}
+    \location{Ames, Iowa, US}
+    \linkedin{linkedin.com/in/mhzhao} \\
+    \github{github.com/mhzhao} 
+    \kaggle{kaggle.com/youtianren} 
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{mhcv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Research \& Work Experience}
+
+\iftrue
+\cvevent{Physics analysis -- Data calibration and analysis}{ML (Boost Decision Tree) method used}{Aug 2017 -- Current}{Ames, IA, U.S}
+\begin{itemize}
+    \item Monte Carlo simulation of proton proton collision and Drell Yan $Z^0/\gamma^*\rightarrow e^-/e^+$ analysis, extract $e^-/e^+$ signal pair from background which is $10^6$ larger than the signal. By using machine learning method of boost decision tree, we can improve signal/background ratio in 2 order ($10^2$).
+    \item Experimental data calibration and analysis, using gaussian and polynomial fitting for calibration.
+    \item Develop c++ classes for data calibration and analysis, and a lot of effort for plotting and data visualization. 
+\end{itemize}
+\cvtag{Shell scripting} 
+\cvtag{C/C++}
+\cvtag{R/Python}
+\cvtag{Perl}
+
+\vspace{10pt}
+
+\cvevent{Experiment -- Detector assemble and maintnance}{Detector expert \hfill Brookhaven National Laboratory}{May 2016 -- Aug 2017}{Upton, NY, U.S}
+\begin{itemize}
+    \item Assembled our scintillator detector which called FPOST, tested and calibrated sillicon photomultiplier (SiPM) device. 
+    \item I was the FPOST detector maintnance expert during the experiment. 
+\end{itemize}
+\cvtag{Oscilloscope} 
+\cvtag{Electronics}
+\cvtag{Electric circuit}
+\cvtag{C/C++}
+\cvtag{Shell scripting}
+
+\vspace{10pt}
+
+\cvevent{Model Simulation and detector operation}{Calculation and experimental skills \hfill }{Aug 2011 -- Jul 2014}{Beijing \& Lanzhou, China}
+\begin{itemize}
+  \item Model simulation and experimental data analysis of ${}^{40}Ca + {}^{40}Ca$ and ${}^{129}Xe+{}^{120}Sn$ collision, a paper pusblished. 
+    \item Detecting cosmic ray muons to abtain experimental skills.
+\end{itemize}
+\cvtag{C/C++} 
+\cvtag{Shell scripting}
+\cvtag{Oscilloscope}
+\cvtag{Electric circuit}
+
+\vspace{10pt}
+
+\cvsection{Education}
+
+\cvevent{Ph.D, majoring in nuclear physics}{Iowa State University \hfill \faIcon{graduation-cap} GPA: 3.68/4}{Aug 2014 -- Current}{Ames, Iowa, U.S}
+\cvevent{MSc, majoring in nuclear physics}{Institute of Modern Physics, UCAS}{Sept 2012 -- Aug 2014}{Lanzhou, China}
+\cvevent{MSc, first year, major in nuclear physics}{University of Chinese Academy of Sciences (UCAS)\hfill \faIcon{graduation-cap} GPA: 3.66/4}{Sept 2011 -- Aug 2012}{Beijing, China}
+\cvevent{BSc, major in physics}{Zhengzhou University (ZZU)\hfill \faIcon{graduation-cap} Score: 3.59/4}{Sept 2007 -- Aug 2011}{Zhengzhou, China}
+
+\clearpage
+\fi
+
+\end{document}
